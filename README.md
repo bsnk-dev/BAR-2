@@ -25,9 +25,11 @@ If you have fixed any error messages on the screen to the best of your ability, 
 ```npm run build```
 3. To test run*
 ```npm run test```
+4. To package for the end-user run
+```npm run package```
 
 *You need to write your own config.json in dev/config/config.json with the correct details in it. Use end-user/config/config.json as a template.
 
 # Requirements
 1. Use TypeScript for the main code and Mocha with TypeScript for tests.
-2. The web app from dist/lib/public is a custom web ui from Bann. It has not yet been released as open-source.
+2. The web app from dist/lib/public is a custom web ui from Bann. It has not yet been released as open-source or under a specific license.
