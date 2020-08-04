@@ -13,6 +13,8 @@ It provides a simple to use way to send a message to every new player of Politic
 
 1. Double click the BAR executable or run it in your terminal/cmd and minimize it away, you can access it from the link provided in the terminal or command prompt.
 
+2. Make sure to configure your instance by going to the configuration tab in the menu and entering your details.
+
 # Troubleshooting
 
 If you have fixed any error messages on the screen to the best of your ability, contact Bann#3995 on discord, or follow the discord link on https://bsnk.dev
