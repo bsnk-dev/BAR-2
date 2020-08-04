@@ -27,7 +27,6 @@ exports.Gatherer = void 0;
 const sa = require("superagent");
 const types = __importStar(require("./types"));
 const Config = require("./config");
-var config = Config.config;
 class Gatherer {
     constructor() {
         this.nations = [];
@@ -37,7 +36,7 @@ class Gatherer {
         this.newAcceptableNations = [];
     }
     async start() {
-        this.loopInterval = setInterval(this.loop, config.checkTime, this);
+        this.loopInterval = setInterval(this.loop, Config.config.checkTime, this);
     }
     clear() {
         clearInterval(this.loopInterval);
@@ -86,7 +85,7 @@ class Gatherer {
         this.apiCallback(apiDetails);
     }
     async getNations() {
-        var response = await sa.get(`https://politicsandwar.com/api/v2/nations/${config.apiKey}/`)
+        var response = await sa.get(`https://politicsandwar.com/api/v2/nations/${Config.config.apiKey}/`)
             .set('Accept', 'text/plain')
             .then()
             .catch(err => { console.error(`Nation Data Gathering Error Code: ${err.status}`); });
