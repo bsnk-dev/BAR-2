@@ -1,0 +1,1 @@
+{"messages":[{"nation":{"id":0,"name":"Foo","leader":"Bar","score":0,"cities":1,"founded":0},"successful":true},{"nation":{"id":0,"name":"Foo","leader":"Bar","score":0,"cities":1,"founded":0},"successful":true}],"apiKeyDetails":{"totalRequests":5000,"remainingRequests":4000},"lastChecked":1596353275653}
