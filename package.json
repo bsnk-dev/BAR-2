@@ -1,0 +1,21 @@
+{
+  "name": "bar-2",
+  "version": "1.0.0",
+  "description": "Bann's Automatic Recruitment - Version 2",
+  "main": "out/index.js",
+  "scripts": {
+    "test": "tsc && shx cp -r ./dev/* ./dist/lib/ && mocha ./dist/test --recursive --timeout 40000",
+    "build": "tsc && shx cp -r ./end-user/* ./dist/lib/"
+  },
+  "author": "bsnk-dev",
+  "license": "MIT",
+  "dependencies": {
+    "@types/mime": "^2.0.3",
+    "@types/mocha": "^8.0.1",
+    "@types/superagent": "^4.1.8",
+    "superagent": "^5.3.1"
+  },
+  "devDependencies": {
+    "mocha": "^8.0.1"
+  }
+}

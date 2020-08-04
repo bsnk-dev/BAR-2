@@ -1,0 +1,4 @@
+{
+    "maxSentMessages": 250,
+    "databaseFile":"db/web-db.json"
+}

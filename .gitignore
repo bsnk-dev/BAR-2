@@ -1,0 +1,4 @@
+dev/config/config.json
+dist/lib/config
+dist/lib/db
+node_modules

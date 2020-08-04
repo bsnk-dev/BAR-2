@@ -1,0 +1,9 @@
+{
+    "pwEmail":"",
+    "pwPassword":"",
+    "apiKey":"",
+    "checkTime":180000,
+    "subject":"",
+    "checksToRelogin":1,
+    "message":""
+}
