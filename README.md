@@ -28,4 +28,6 @@ If you have fixed any error messages on the screen to the best of your ability, 
 
 *You need to write your own config.json in dev/config/config.json with the correct details in it. Use end-user/config/config.json as a template.
 
-Use TypeScript for the main code and Mocha with TypeScript for tests.
+# Requirements
+1. Use TypeScript for the main code and Mocha with TypeScript for tests.
+2. The web app from dist/lib/public is a custom web ui from Bann. It has not yet been released as open-source.
