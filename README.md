@@ -16,4 +16,16 @@ It provides a simple to use way to send a message to every new player of Politic
 # Troubleshooting
 
 If you have fixed any error messages on the screen to the best of your ability, contact Bann#3995 on discord, or follow the discord link on https://bsnk.dev
- 
+
+# Developing
+
+1. To install packages run
+```npm i```
+2. To build run
+```npm run build```
+3. To test run*
+```npm run test```
+
+*You need to write your own config.json in dev/config/config.json with the correct details in it. Use end-user/config/config.json as a template.
+
+Use TypeScript for the main code and Mocha with TypeScript for tests.
