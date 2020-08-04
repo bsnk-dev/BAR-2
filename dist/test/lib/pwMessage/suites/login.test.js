@@ -10,6 +10,10 @@ function suite() {
             var success = await this.goodMessenger.login();
             assert_1.default.strictEqual(success, true);
         });
+        it('should succeed with blank login info', async function () {
+            var success = await this.blankMessenger.login();
+            assert_1.default.strictEqual(success, true);
+        });
         it('should fail with incorrect login info', async function () {
             var success = await this.badMessenger.login();
             assert_1.default.strictEqual(success, false);

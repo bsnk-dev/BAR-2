@@ -6,7 +6,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const Config = require("./config");
 const pwMessenger = require("./pwMessage");
-var messenger = new pwMessenger.messenger(Config.config.pwEmail, Config.config.pwPassword);
+var messenger = new pwMessenger.messenger();
 const Gatherer = require("./gatherer");
 var gatherer = new Gatherer.Gatherer();
 const webViewer = require("./webViewer");
@@ -22,7 +22,7 @@ gatherer.onDataGathered(async (data) => {
     if (loopsSinceLastLogin >= Config.config.checksToRelogin) {
         var hasLoggedOn = await messenger.login();
         if (!hasLoggedOn) {
-            console.log("Cannot login to Politics and War. Please check your login information in config. P&W may also be down. Make sure to configure it in the local web ui.");
+            console.log("Cannot login to Politics and War. Please check your login information in config. P&W may also be down. Make sure to configure it in the local web ui. ");
             return;
         }
         loopsSinceLastLogin = 0;

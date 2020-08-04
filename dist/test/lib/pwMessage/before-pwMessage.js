@@ -24,4 +24,5 @@ const config_1 = require("../../../lib/config");
 before(function () {
     this.goodMessenger = new pwMessage.messenger(config_1.config.pwEmail, config_1.config.pwPassword);
     this.badMessenger = new pwMessage.messenger("__foo@foo.com", "*");
+    this.blankMessenger = new pwMessage.messenger();
 });
