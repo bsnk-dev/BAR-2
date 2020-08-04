@@ -6,7 +6,7 @@
   "scripts": {
     "test": "tsc && shx cp -r ./dev/* ./dist/lib/ && mocha ./dist/test --recursive --timeout 40000",
     "build": "tsc && shx cp -r ./end-user/* ./dist/lib/",
-    "package": "pkg ./dist/lib/index.js --target node12-win-x64 --output build/bar.exe && shx cp -r ./end-user/* ./build/ && shx cp -r ./dist/lib/public/ ./build/"
+    "package": "pkg ./dist/lib/index.js --target node12-win-x64 --output build/bar.exe && shx cp -r ./end-user/* ./build/ && shx cp -r ./dist/lib/public/ ./build/ && shx cp ./README.md ./build/README.txt"
   },
   "author": "bsnk-dev",
   "license": "MIT",
