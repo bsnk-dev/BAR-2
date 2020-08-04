@@ -120,14 +120,6 @@ var server = http.createServer((request, response) => {
                     config.setConfig(newConfigData);
                     fs.writeFileSync(config.root + "config/config.json", JSON.stringify(newConfigData));
                     response.end('{"success":true}');
-                    if (data.pwEmail || data.pwPassword) {
-                        setTimeout(function () {
-                            process.on("exit", function () {
-                                require("child_process").exec(process.argv.shift());
-                            });
-                            process.exit();
-                        }, 1000);
-                    }
                 }
                 catch (_a) {
                     response.end('{"success":false"}');

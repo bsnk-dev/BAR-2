@@ -10,6 +10,12 @@ export default function suite()
             assert.strictEqual(success, true);
         });
 
+        it('should succeed with blank login info', async function()
+        {  
+            var success: boolean = await this.blankMessenger.login()
+            assert.strictEqual(success, true);
+        });
+
         it('should fail with incorrect login info', async function()
         {  
             var success: boolean = await this.badMessenger.login()

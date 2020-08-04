@@ -6,4 +6,5 @@ before(function()
 {
     this.goodMessenger = new pwMessage.messenger(config.pwEmail, config.pwPassword);
     this.badMessenger = new pwMessage.messenger("__foo@foo.com", "*");
+    this.blankMessenger = new pwMessage.messenger();
 })

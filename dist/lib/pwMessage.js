@@ -35,6 +35,9 @@ class messenger {
         this.password = password;
         this.queue = [];
     }
+    getEmailAndPassword() {
+        return { email: this.email || config_1.config.pwEmail, password: this.password || config_1.config.pwPassword };
+    }
     async emptyQueue() {
         for (var i = this.queue.length - 1; i >= 0; i--) {
             var success = await this.sendMessage({ receiver: this.queue[i].leader, subject: config_1.config.subject, body: config_1.config.message });
@@ -52,9 +55,10 @@ class messenger {
         this.queue.push(nation);
     }
     async login() {
+        var login = this.getEmailAndPassword();
         var response = await this.session
             .post("https://politicsandwar.com/login/")
-            .send({ "email": this.email, "password": this.password, "loginform": "Login" })
+            .send({ "email": login.email, "password": login.password, "loginform": "Login" })
             .type("form")
             .set('Accept', 'text/plain')
             .then();

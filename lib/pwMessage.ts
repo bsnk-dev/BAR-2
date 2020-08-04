@@ -11,18 +11,23 @@ import * as types from "./types";
 export class messenger
 {
     private session: any;
-    private email: string;
-    private password: string;
+    private email: string | undefined;
+    private password: string | undefined;
     private queue: Array<types.Nation>;
 
     private callback: Function = function() {};
 
-    constructor(email: string, password: string)
+    constructor(email?: string, password?: string)
     {
         this.session = superagent.agent();
         this.email = email;
         this.password = password;
         this.queue = [];
+    }
+
+    getEmailAndPassword()
+    {
+        return {email: this.email || config.pwEmail, password: this.password || config.pwPassword };
     }
 
     async emptyQueue()
@@ -54,9 +59,11 @@ export class messenger
     
     async login()
     {   
+        var login: any = this.getEmailAndPassword();
+
         var response = await this.session
             .post("https://politicsandwar.com/login/")
-            .send({"email": this.email, "password": this.password, "loginform": "Login"})
+            .send({"email": login.email, "password": login.password, "loginform": "Login"})
             .type("form")
             .set('Accept', 'text/plain')
             .then();
