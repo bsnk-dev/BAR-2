@@ -1,6 +1,6 @@
 {
   "name": "bar-2",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "description": "Bann's Automatic Recruitment - Version 2",
   "main": "out/index.js",
   "scripts": {
