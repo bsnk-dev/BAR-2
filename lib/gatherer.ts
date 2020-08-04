@@ -8,9 +8,6 @@ import sa = require("superagent");
 import * as types from "./types";
 
 import Config = require("./config");
-var config = Config.config; 
-
-import pwMessenger = require("./pwMessage");
 
 export class Gatherer
 {
@@ -24,7 +21,7 @@ export class Gatherer
 
     async start()
     {
-        this.loopInterval = setInterval(this.loop, config.checkTime, this);
+        this.loopInterval = setInterval(this.loop, Config.config.checkTime, this);
     }
 
     clear()
@@ -105,7 +102,7 @@ export class Gatherer
 
     async getNations()
     {
-        var response: any = await sa.get(`https://politicsandwar.com/api/v2/nations/${config.apiKey}/`)
+        var response: any = await sa.get(`https://politicsandwar.com/api/v2/nations/${Config.config.apiKey}/`)
            .set('Accept', 'text/plain')
            .then()
            .catch(err => {console.error(`Nation Data Gathering Error Code: ${err.status}`)});
