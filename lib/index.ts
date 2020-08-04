@@ -19,7 +19,9 @@ webServer.startServer();
 
 console.log("Bann's Auto Recruitment Bot 2 (BAR 2)", 
             "\nView your recruitment details at:", 
-            "\nLocal: http://localhost:8008/index.html")
+            "\nLocal: http://localhost:8008/index.html",
+            "\n\n404 Errors and failed messages are caused by configuration errors. Configure it by going to the link above and going to the configuration page.",
+            "\n\n");
             
 webServer.getLocalIPAddress({}).then(res => console.log(`Network: http://${res}:8008/index.html`));
 
@@ -39,7 +41,7 @@ gatherer.onDataGathered(async (data: Gatherer.Gatherer) =>
 
         if (!hasLoggedOn)
         {
-            console.log("Cannot login to Politics and War. Please check your login information in config. P&W may also be down. Make sure to configure it in the local web ui. "); 
+            console.log("Cannot login to Politics and War. Please check your login information in config. P&W may also be down."); 
             return;
         }
 
