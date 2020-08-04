@@ -85,7 +85,6 @@ export class messenger
 
     async sendMessage(options: types.NewMessageOptions)
     {
-        return true;
         options = this.messageOptions(options);
 
         var response: any = await this.session

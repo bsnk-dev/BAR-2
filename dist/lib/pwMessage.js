@@ -74,7 +74,6 @@ class messenger {
         return newOptions;
     }
     async sendMessage(options) {
-        return true;
         options = this.messageOptions(options);
         var response = await this.session
             .post("https://politicsandwar.com/inbox/message/")
