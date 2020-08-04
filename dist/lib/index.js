@@ -22,7 +22,7 @@ gatherer.onDataGathered(async (data) => {
     if (loopsSinceLastLogin >= Config.config.checksToRelogin) {
         var hasLoggedOn = await messenger.login();
         if (!hasLoggedOn) {
-            console.log("Cannot login to Politics and War. Please check your login information in config. P&W may also be down.");
+            console.log("Cannot login to Politics and War. Please check your login information in config. P&W may also be down. Make sure to configure it in the local web ui.");
             return;
         }
         loopsSinceLastLogin = 0;
