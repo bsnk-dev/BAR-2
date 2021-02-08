@@ -1,3 +1,8 @@
+# Deprecated ⚠️ 
+
+This project has been deprecated in favor of Bar 3.
+
+
 # BAR 2.0
 Bann's Auto Recruitment Bot, with a beautiful web interface to explore and configure. Make sure to only use this application on your own private network. A VPN will NOT help.
 
